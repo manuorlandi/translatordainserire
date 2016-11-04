@@ -1,0 +1,57 @@
+{
+  "name": "audio-analysis",
+  "version": "1.0.0",
+  "description": "A sample nodejs app for Bluemix that combines Speech to Text with AlchemyLanguage to retrieve concepts from videos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watson-developer-cloud/audio-analysis.git"
+  },
+  "author": "IBM Corp.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/watson-developer-cloud/audio-analysis/issues"
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "scripts": {
+    "start": "node app.js",
+    "build-debug": "browserify src/index.js > public/js/index.js && browserify src/dashboard.js > public/js/dashboard.js",
+    "build": "browserify src/index.js | uglifyjs -nc > public/js/index.js && browserify src/dashboard.js | uglifyjs -nc > public/js/dashboard.js",
+    "watch": "watchify -v -d -o public/js/index.js src/index.js",
+    "postinstall": "npm run build",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "browserify": "^13.1.1",
+    "browserify-shim": "^3.8.11",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.4",
+    "express-rate-limit": "^2.1.0",
+    "express-secure-only": "^0.2.1",
+    "extend": "^3.0.0",
+    "helmet": "^3.0.0",
+    "jquery": ">=2.1",
+    "jsdom": "3.1.2",
+    "request": "2.76.0",
+    "uglifyjs": "^2.4.10",
+    "vcap_services": "^0.2.0",
+    "watchify": "^3.6.1",
+    "watson-developer-cloud": "^2.8.1",
+    "watson-speech": "^0.7.0"
+  },
+  "engines": {
+    "node": "^6.9.1",
+    "npm": "3.10.9"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1"
+  }
+}

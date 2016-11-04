@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Università Degli Studi Di Genova</title>
+    <meta name="og:title" content="Video Analysis"
+    <meta name="og:description" content=" ">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="_app--banner">
+        <div class="_app--container">
+            <a class="header--container" href="/">
+                <div class="header--logo">
+                    <img src="images/logo.png" alt="" />
+                </div>
+                <div class="header--title">
+                   	Università Degli Studi Di Genova
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="_app--container">
+        <div class="_app--heading">
+            <div class="heading--title">
+                Progetto Semantic Web
+            </div>
+        </div>
+
+        <div class="_app--description">
+            Lo scopo di questa applicazione è analizzare una videolezione dal punto di vista semantico, per poterne estrarre i contenuti e consigliare materiale inerente. E’ scritta in Node.js e usa pacchetti npm.
+Gli strumenti utilizzati sono i moduli Watson Speech-To-Text, che trascrive il contenuto audio della videolezione, e Watson Concept-Insight, che identifica i concetti semantici trattati fornendo informazioni e materiale attinente.
+        </div>
+
+        <a class="_app--get-started" href="#video-picking">
+            <div class="get-started--text">
+               
+            </div>
+            <span class="get-started--icon icon icon-down-arrow"></span>
+        </a>
+    </div>
+
+    <div class="_app--input-area">
+        <div class="_app--container">
+
+            <div class="_app--video-picking">
+                <div class="video-picking--title" id="video-picking">
+                    Scegli un video che ti interessa
+                </div>
+                <a class="video-picking--video-container" href="dashboard?v=DywO4zksfXw">
+                    <img class="video-picking--video-cover-pic" src="images/cover-page-IBM.jpg">
+                    <div class="video-picking--video-title">
+                        IBM Watson: The Science Behind an Answer
+                    </div>
+                </a>
+                <a class="video-picking--video-container" href="dashboard?v=V3dFHt9p5W8">
+                    <img class="video-picking--video-cover-pic" src="images/Algebra.jpg">
+                    <div class="video-picking--video-title">
+                        Basic Algebra Lessons
+                    </div>
+                </a>
+                <a class="video-picking--video-container" href="dashboard?v=k6U-i4gXkLM">
+                    <img class="video-picking--video-cover-pic" src="images/MIT.jpg">
+                    <div class="video-picking--video-title">
+                        Introduction to Computer Science and Programming
+                    </div>
+                </a>
+                <a class="video-picking--video-container" href="dashboard?v=A5MXfq9rtm4">
+                    <img class="video-picking--video-cover-pic" src="images/English.jpg">
+                    <div class="video-picking--video-title">
+                        English video lesson
+                    </div>
+                </a>
+                <div class="video-picking--label">
+                    O incolla un URL di Youtube qui
+                </div>
+                <div class="video-picking--input-container">
+                    <input class="video-picking--input" type="text" name="name" placeholder="youtube url">
+
+                    <span class="video-picking--input-btn icon icon-right-arrow" type="button" name="button">
+           </span>
+                </div>
+            </div>
+
+            <div class="footer--legal-links-container-index">
+             
+         
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Place js files at the end of the document, with fallbacks for CDNs -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
